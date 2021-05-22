@@ -19,12 +19,21 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/pay-with-momo', function () {
+    return view('momo');
+});
+Route::get('/pay-with-card', function () {
+    return view('card');
+});
+
+Route::get('/donation-success/{id}', function ($id) {
+    return view('donation-success')->with('id',$id);
+});
+Route::get('/donation-failed/{id}', function ($id) {
+    return view('donation-failed')->with('id',$id);
+});
+
+//payments
+Route::post('payments', 'PaymentController@store');
 
 Auth::routes();
-
-// Route::get('/home', [HomeController::class, 'index'])->name('home');
-
-Route::get('/','ChatsController@index');
-Route::get('messages','ChatsController@getMessages');
-Route::post('messages','ChatsController@store');
-

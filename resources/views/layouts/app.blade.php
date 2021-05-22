@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,112 +12,245 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="/css/app.css" rel="stylesheet">
-
-    <style>
-        .chat {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        .chat li {
-            margin-bottom: 10px;
-            padding-bottom: 5px;
-            border-bottom: 1px dotted #B3A9A9;
-        }
-        .chat li .chat-body p {
-            margin: 0;
-            color: #777777;
-        }
-        .panel-body {
-            overflow-y: scroll;
-            height: 350px;
-        }
-        ::-webkit-scrollbar-track {
-            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-            background-color: #F5F5F5;
-        }
-        ::-webkit-scrollbar {
-            width: 12px;
-            background-color: #F5F5F5;
-        }
-        ::-webkit-scrollbar-thumb {
-            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-            background-color: #555;
-        }
-    </style>
-
-    <!-- Scripts -->
-    <script>
-        window.Laravel = {!! json_encode([
-            'csrfToken' => csrf_token(),
-            'pusherKey' => config('broadcasting.connections.pusher.key'),
-            'pusherCluster' => config('broadcasting.connections.pusher.options.cluster')
-        ]) !!};
-    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+  
 </head>
+
 <body>
-    <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
+    <div style="margin-top:50px;margin-bottom:20px">
 
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @if (Auth::guest())
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
-                        @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                        @endif
-                    </ul>
-                </div>
-            </div>
-        </nav>
 
         @yield('content')
     </div>
 
-    <!-- Scripts -->
-    <script src="/js/app.js"></script>
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="/js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="/js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="/js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+
+
+    <script src="/js/jquery.validate.min.js"></script>
+    <script src="https://checkout.flutterwave.com/v3.js"></script>
+
+    <script>
+    $(document).ready(function(){
+
+$('.paymentForm').validate({
+            rules: {
+             
+				firstName: {
+                    required: true,
+                    minlength: 2
+                },
+                lastName: {
+                    required: true,
+                    minlength: 2
+                },
+               
+                email: {
+                    required: true,
+                    email: true
+                },
+               
+                country: {
+                    required: true
+                },
+                city: {
+                    required: true,
+                    minlength: 2
+                },
+                address: {
+                    required: true,
+                    minlength: 2
+                },
+                postCode: {
+                    required: true,
+                    minlength: 2
+                }
+				
+            },
+            messages: {
+				firstName: {
+                    required: "come on, you have a first name, don't you?",
+                    minlength: "your first name must consist of at least 2 characters"
+                },
+                lastName: {
+                    required: "come on, you have a last name, don't you?",
+                    minlength: "your last name must consist of at least 2 characters"
+                },
+              
+                email: {
+                    required: "come on, you have an email, don't you?",
+                },
+                address: {
+                    required: "come on, you have a address, don't you?",
+                    minlength: "your address must consist of at least 2 characters"
+                },
+                country: {
+					required: "come on, you have a country don't you?"
+                },
+                city: {
+					required: "come on, you have a city don't you?"
+                },
+               
+               
+                postCode: {
+                    required: "come on, you have a post code, don't you?"
+				}
+            },
+            submitHandler: function(form) {
+                
+                 return payWithCard();
+               
+             
+            }
+		});
+    });
+
+    function payWithCard() {
+           
+
+            var amount = 256;
+
+            // return donateForm({
+            //             '_token':"<?php echo csrf_token() ?>",
+            //             paymentStatus:'successful',
+            //             paymentMethod: 'CARD',
+            //             email: $('.email').val(),
+            //             name: $('.firstName').val()+' '+$('.lastName').val(),
+            //             currency: 'USD',
+            //             address:$('.address').val(),
+            //             address2:$('.address2').val(),
+            //             city:$('.city').val(),
+            //             postCode:$('.postCode').val(),
+            //             country:$('.country').val(),
+            //             amount: amount,
+            //             fee: 15
+            //         })
+            FlutterwaveCheckout({
+                public_key: "<?php echo env('FTW_PUB_TOKEN') ?>",
+                tx_ref: "<?php echo \Str::random(40) ?>",
+                amount: amount,
+                currency: 'USD',
+                payment_options: "card",
+                customer: {
+                    email: $('.email').val(),
+                    phonenumber: '0781945189',
+                    name: $('.firstName').val()+' '+$('.lastName').val(),
+
+                },
+                callback: function(data) {
+                    return donateForm({
+                        paymentStatus: data.status.toLowerCase(),
+                        paymentMethod: 'CARD',
+                        email: $('.email').val(),
+                        name: $('.firstName').val()+' '+$('.lastName').val(),
+                        currency: 'USD',
+                        address:$('.address').val(),
+                        address2:$('.address2').val(),
+                        city:$('.city').val(),
+                        postCode:$('.postCode').val(),
+                        country:$('.country').val(),
+                        amount: amount,
+                        fee: 15
+                    })
+
+                },
+                customizations: {
+                    title: "Africa XYZ",
+                    description: "AFRICA XYZ",
+                    logo: "",
+                },
+            });
+
+
+        }
+        function payWithMomo() {
+            if (!$('.u_donation_amount').val()) {
+                return alert('Enter Amount!');
+            }
+
+            var amount = $('.u_donation_amount').val() * 995.00;
+
+            // return donateForm({
+            //             '_token':"<?php echo csrf_token() ?>",
+            //             paymentStatus:'failed',
+            //             paymentMethod:'MOBILEMONEY',
+            //             email:'info@africa.xyz',
+            //             name:'Africa xyz',
+            //             currency:'RWF',
+            //             amount:amount,
+            //             fee:0
+            //         })
+            FlutterwaveCheckout({
+                public_key: "<?php echo env('FTW_PUB_TOKEN') ?>",
+                tx_ref: "<?php echo \Str::random(40) ?>",
+                amount: amount,
+                currency: 'RWF',
+                payment_options: "mobilemoney",
+                customer: {
+                    email: 'info@africa.xyz',
+                    phonenumber: '0781945189',
+                    name: 'Africa xyz',
+
+                },
+                callback: function(data) {
+                    return donateForm({
+                        paymentStatus: data.status.toLowerCase(),
+                        paymentMethod: 'MOBILEMONEY',
+                        email: 'info@africa.xyz',
+                        name: 'Africa xyz',
+                        currency: 'RWF',
+                        amount: amount,
+                        fee: 0
+                    })
+
+                },
+                customizations: {
+                    title: "Africa XYZ",
+                    description: "AFRICA XYZ",
+                    logo: "",
+                },
+            });
+
+
+        }
+
+
+        function addDLevelUsd(num) {
+            document.getElementById('donateUsdField').value = parseFloat(num);
+        }
+
+        function donateForm(form) {
+
+            $.ajax({
+                url: "payments",
+                type: "POST",
+                data: form,
+                success: (response) => {
+
+                    if (response.paymentStatus == 'failed') {
+
+                        return window.location.href = '/donation-failed/' + response.id;
+
+                    } else {
+                        return window.location.href = '/donation-success/' + response.id;
+                    }
+                },
+                error(e, d) {
+
+                }
+
+            })
+        }
+    </script>
 </body>
+
 </html>
