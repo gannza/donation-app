@@ -15,7 +15,7 @@
                             <div class="col-12">
                                 <div class="row">
                                     <div class="col-4">
-                                        <button type="button"  class="btn btn-info btn-block pt-3 pb-3" onclick="addDLevelUsd('0.25')"> <span>&nbsp;$0.25</span> </button>
+                                        <button type="button"  class="btn btn-info btn-block pt-3 pb-3" onclick="addDLevelUsd('0.21')"> <span>&nbsp;$0.21</span> </button>
                                     </div>
                                     <div class="col-4">
                                         <button type="button"  class="btn btn-info btn-block pt-3 pb-3" onclick="addDLevelUsd('25')"> <span>&nbsp;&nbsp;$25</span> </button>
