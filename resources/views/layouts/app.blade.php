@@ -147,10 +147,10 @@ $('.paymentForm').validate({
 
                 },
                 callback: function(data) {
-                    return donateForm({
+                    return  donateForm({
+                        '_token':"<?php echo csrf_token() ?>",
                         paymentStatus: data.status.toLowerCase(),
                         paymentMethod: 'CARD',
-                        '_token':"<?php echo csrf_token() ?>",
                         email: $('.email').val(),
                         name: $('.firstName').val()+' '+$('.lastName').val(),
                         currency: 'USD',
@@ -161,7 +161,7 @@ $('.paymentForm').validate({
                         country:$('.country').val(),
                         amount: amount,
                         fee: 15
-                    })
+                    });
 
                 },
                 customizations: {
@@ -204,15 +204,15 @@ $('.paymentForm').validate({
                 },
                 callback: function(data) {
                     return donateForm({
-                        paymentStatus: data.status.toLowerCase(),
                         '_token':"<?php echo csrf_token() ?>",
-                        paymentMethod: 'MOBILEMONEY',
-                        email: 'info@africa.xyz',
-                        name: 'Africa xyz',
-                        currency: 'RWF',
-                        amount: amount,
-                        fee: 0
-                    })
+                        paymentStatus: data.status.toLowerCase(),
+                        paymentMethod:'MOBILEMONEY',
+                        email:'info@africa.xyz',
+                        name:'Africa xyz',
+                        currency:'RWF',
+                        amount:amount,
+                        fee:0
+                    });
 
                 },
                 customizations: {
