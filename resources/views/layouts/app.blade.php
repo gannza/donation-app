@@ -150,6 +150,7 @@ $('.paymentForm').validate({
                     return donateForm({
                         paymentStatus: data.status.toLowerCase(),
                         paymentMethod: 'CARD',
+                        '_token':"<?php echo csrf_token() ?>",
                         email: $('.email').val(),
                         name: $('.firstName').val()+' '+$('.lastName').val(),
                         currency: 'USD',
@@ -204,6 +205,7 @@ $('.paymentForm').validate({
                 callback: function(data) {
                     return donateForm({
                         paymentStatus: data.status.toLowerCase(),
+                        '_token':"<?php echo csrf_token() ?>",
                         paymentMethod: 'MOBILEMONEY',
                         email: 'info@africa.xyz',
                         name: 'Africa xyz',
