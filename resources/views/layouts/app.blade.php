@@ -12,8 +12,8 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/main.css" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
    
 
 </head>
@@ -35,9 +35,9 @@
     </nav>
 
     @yield('content')
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/bootstrap/popper.min.js"></script>
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap/popper.min.js') }}"></script>
     <!-- All Plugins js -->
     <script src="/js/jquery.validate.min.js"></script>
     <script src="https://checkout.flutterwave.com/v3.js"></script>
