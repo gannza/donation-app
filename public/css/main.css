@@ -714,3 +714,73 @@ a, a:hover, a:focus {
     color: #222222 !important;
     background: #FFFFFF !important;
 }
+
+.africaxyz-start {
+    font-weight: 400 !important;
+    color: #e0d1d1 !important;
+    position: relative !important;
+}
+.africaxyz-start-a {
+    display: block !important;
+    height: 100% !important;
+    left: 0px !important;
+    position: absolute !important;
+    top: 0px !important;
+    width: 100% !important;
+}
+.africaxyz-start-card {
+    -webkit-box-direction: normal !important;
+    -webkit-box-orient: horizontal !important;
+    display: -webkit-box !important;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+    -webkit-flex-direction: row !important;
+    -ms-flex-direction: row !important;
+    flex-direction: row !important;
+    overflow: hidden !important;
+    border: 1px solid #DDDDDD !important;
+    border-radius: 12px !important;
+    padding: 12px !important;
+    padding-right: 16px !important;
+}
+.africaxyz-start-card-img-part {
+    width: 100% !important;
+}
+.africaxyz-start-card-img-part-ctnt {
+    overflow: hidden !important;
+    position: relative !important;
+    -webkit-mask-image: -webkit-radial-gradient(white, black) !important;
+    contain: none !important;
+    border-top-left-radius: 12px !important;
+    border-top-right-radius: 12px !important;
+    border-bottom-left-radius: 12px !important;
+    border-bottom-right-radius: 12px !important;
+    pointer-events: none !important;
+}
+.africaxyz-start-card-img-part-ctnt-1 {
+    width: 123px !important;
+}
+.africaxyz-start-card-img-part-ctnt-2 {
+    overflow: hidden !important;
+    position: relative !important;
+    -webkit-mask-image: -webkit-radial-gradient(white, black) !important;
+    contain: none !important;
+    border-top-left-radius: 12px !important;
+    border-top-right-radius: 12px !important;
+    border-bottom-left-radius: 12px !important;
+    border-bottom-right-radius: 12px !important;
+    pointer-events: none !important;
+}
+.africaxyz-start-card-img-part-ctnt-3 {
+    padding-top: var(--dls-liteimage-padding-top) !important;
+    position: relative !important;
+    -webkit-flex: 1 !important;
+    -ms-flex: 1 1 0% !important;
+    flex: 1 !important;
+    background-position: 50% 50% !important;
+    background-repeat: no-repeat !important;
+}
+
+

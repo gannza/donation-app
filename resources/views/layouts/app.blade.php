@@ -12,14 +12,9 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link href="css/main.css" rel="stylesheet">
-    <script src="/js/bootstrap/popper.min.js"></script>
-    <!-- All Plugins js -->
-    <script src="/js/jquery.validate.min.js"></script>
-    <script src="https://checkout.flutterwave.com/v3.js"></script>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="/css/main.css" rel="stylesheet">
+   
 
 </head>
 
@@ -40,7 +35,12 @@
     </nav>
 
     @yield('content')
-
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap/popper.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="/js/jquery.validate.min.js"></script>
+    <script src="https://checkout.flutterwave.com/v3.js"></script>
 
     <script>
         $(document).ready(function() {
