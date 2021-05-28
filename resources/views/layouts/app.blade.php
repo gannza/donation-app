@@ -12,110 +12,113 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="css/main.css" rel="stylesheet">
-  
-</head>
-
-<body>
-    <div style="margin-top:50px;margin-bottom:20px">
-
-
-        @yield('content')
-    </div>
-
-    <!-- ##### All Javascript Script ##### -->
-    <!-- jQuery-2.2.4 js -->
-    <script src="/js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
     <script src="/js/bootstrap/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <script src="/js/bootstrap/bootstrap.min.js"></script>
     <!-- All Plugins js -->
-
-
     <script src="/js/jquery.validate.min.js"></script>
     <script src="https://checkout.flutterwave.com/v3.js"></script>
 
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-md custom-navbar navbar-dark">
+        <img class="navbar-brand ml-5" src="logo.png" id="logo_custom" width="height: 40px !important;width:10%" alt="logo">
+        <button class="navbar-toggler navbar-toggler-right custom-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="collapse navbar-collapse " id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto ">
+                <li class="nav-item">
+                    <a class="nav-link" href="#offer"><b>Become a host</b></a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    @yield('content')
+
+
     <script>
-    $(document).ready(function(){
+        $(document).ready(function() {
 
-$('.paymentForm').validate({
-            rules: {
-             
-				firstName: {
-                    required: true,
-                    minlength: 2
+            $('.paymentForm').validate({
+                rules: {
+
+                    firstName: {
+                        required: true,
+                        minlength: 2
+                    },
+                    lastName: {
+                        required: true,
+                        minlength: 2
+                    },
+
+                    email: {
+                        required: true,
+                        email: true
+                    },
+
+                    country: {
+                        required: true
+                    },
+                    city: {
+                        required: true,
+                        minlength: 2
+                    },
+                    address: {
+                        required: true,
+                        minlength: 2
+                    },
+                    postCode: {
+                        required: true,
+                        minlength: 2
+                    }
+
                 },
-                lastName: {
-                    required: true,
-                    minlength: 2
+                messages: {
+                    firstName: {
+                        required: "come on, you have a first name, don't you?",
+                        minlength: "your first name must consist of at least 2 characters"
+                    },
+                    lastName: {
+                        required: "come on, you have a last name, don't you?",
+                        minlength: "your last name must consist of at least 2 characters"
+                    },
+
+                    email: {
+                        required: "come on, you have an email, don't you?",
+                    },
+                    address: {
+                        required: "come on, you have a address, don't you?",
+                        minlength: "your address must consist of at least 2 characters"
+                    },
+                    country: {
+                        required: "come on, you have a country don't you?"
+                    },
+                    city: {
+                        required: "come on, you have a city don't you?"
+                    },
+
+
+                    postCode: {
+                        required: "come on, you have a post code, don't you?"
+                    }
                 },
-               
-                email: {
-                    required: true,
-                    email: true
-                },
-               
-                country: {
-                    required: true
-                },
-                city: {
-                    required: true,
-                    minlength: 2
-                },
-                address: {
-                    required: true,
-                    minlength: 2
-                },
-                postCode: {
-                    required: true,
-                    minlength: 2
+                submitHandler: function(form) {
+
+                    return payWithCard();
+
+
                 }
-				
-            },
-            messages: {
-				firstName: {
-                    required: "come on, you have a first name, don't you?",
-                    minlength: "your first name must consist of at least 2 characters"
-                },
-                lastName: {
-                    required: "come on, you have a last name, don't you?",
-                    minlength: "your last name must consist of at least 2 characters"
-                },
-              
-                email: {
-                    required: "come on, you have an email, don't you?",
-                },
-                address: {
-                    required: "come on, you have a address, don't you?",
-                    minlength: "your address must consist of at least 2 characters"
-                },
-                country: {
-					required: "come on, you have a country don't you?"
-                },
-                city: {
-					required: "come on, you have a city don't you?"
-                },
-               
-               
-                postCode: {
-                    required: "come on, you have a post code, don't you?"
-				}
-            },
-            submitHandler: function(form) {
-                
-                 return payWithCard();
-               
-             
-            }
-		});
-    });
+            });
+        });
 
-    function payWithCard() {
-           
+        function payWithCard() {
+
 
             var amount = 256;
 
@@ -143,22 +146,22 @@ $('.paymentForm').validate({
                 customer: {
                     email: $('.email').val(),
                     phonenumber: '0781945189',
-                    name: $('.firstName').val()+' '+$('.lastName').val(),
+                    name: $('.firstName').val() + ' ' + $('.lastName').val(),
 
                 },
                 callback: function(data) {
-                    return  donateForm({
-                        '_token':"<?php echo csrf_token() ?>",
+                    return donateForm({
+                        '_token': "<?php echo csrf_token() ?>",
                         paymentStatus: data.status.toLowerCase(),
                         paymentMethod: 'CARD',
                         email: $('.email').val(),
-                        name: $('.firstName').val()+' '+$('.lastName').val(),
+                        name: $('.firstName').val() + ' ' + $('.lastName').val(),
                         currency: 'USD',
-                        address:$('.address').val(),
-                        address2:$('.address2').val(),
-                        city:$('.city').val(),
-                        postCode:$('.postCode').val(),
-                        country:$('.country').val(),
+                        address: $('.address').val(),
+                        address2: $('.address2').val(),
+                        city: $('.city').val(),
+                        postCode: $('.postCode').val(),
+                        country: $('.country').val(),
                         amount: amount,
                         fee: 15
                     });
@@ -173,6 +176,7 @@ $('.paymentForm').validate({
 
 
         }
+
         function payWithMomo() {
             if (!$('.u_donation_amount').val()) {
                 return alert('Enter Amount!');
@@ -204,14 +208,14 @@ $('.paymentForm').validate({
                 },
                 callback: function(data) {
                     return donateForm({
-                        '_token':"<?php echo csrf_token() ?>",
+                        '_token': "<?php echo csrf_token() ?>",
                         paymentStatus: data.status.toLowerCase(),
-                        paymentMethod:'MOBILEMONEY',
-                        email:'info@africa.xyz',
-                        name:'Africa xyz',
-                        currency:'RWF',
-                        amount:amount,
-                        fee:0
+                        paymentMethod: 'MOBILEMONEY',
+                        email: 'info@africa.xyz',
+                        name: 'Africa xyz',
+                        currency: 'RWF',
+                        amount: amount,
+                        fee: 0
                     });
 
                 },
