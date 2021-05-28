@@ -25,7 +25,7 @@
 
 <body>
     <nav class="navbar fixed-top navbar-expand-md custom-navbar navbar-dark">
-        <img class="navbar-brand ml-5" src="logo.png" id="logo_custom" width="height: 40px !important;width:10%" alt="logo">
+        <img class="navbar-brand ml-5" src="logo.PNG" id="logo_custom" width="height: 40px !important;width:10%" alt="logo">
         <button class="navbar-toggler navbar-toggler-right custom-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon "></span>
         </button>

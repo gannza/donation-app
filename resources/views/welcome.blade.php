@@ -15,7 +15,7 @@
         </div>
 
         <div class="col-md-8 col-sm-8">
-            <img src="/bg.png" class="mt-4" style="width: 100%;">
+            <img src="/bg.PNG" class="mt-4" style="width: 100%;">
         </div>
     </div>
 
