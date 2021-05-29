@@ -1,17 +1,34 @@
 require('./bootstrap');
 
-Vue.component('chat-messages', require('./components/ChatMessages.vue').default);
-Vue.component('chat-form', require('./components/ChatForm.vue').default);
+Vue.component('momo', require('./components/Momo.vue').default);
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-vue/dist/bootstrap-vue.css';
+import VueLoading from 'vuejs-loading-plugin';
+import { EmbedPlugin } from 'bootstrap-vue'
+Vue.use(EmbedPlugin);
 
+Vue.use(VueLoading, {
+    dark: true, // default false
+    text: 'Loading..', // default 'Loading'
+    loading: false, // default false
+    background: 'rgb(255,255,255)', // set custom background
+    classes: ['momo'] // array, object or string
+  })
+// Optionally install the BootstrapVue icon components plugin
+Vue.use(BootstrapVue)
+Vue.use(IconsPlugin)
 const app = new Vue({
     el: '#app',
 
     data: {
-        messages: []
+        messages: [],
+        apierrors:[],
+        apiresponse:[]
     },
 
     created() {
-        this.fetchMessages();
+        // this.fetchMessages();
         Echo.private('chat')
         .listen('MessageSent', (e) => {
             console.log('event',el);
@@ -23,18 +40,17 @@ const app = new Vue({
     },
 
     methods: {
-        fetchMessages() {
-            axios.get('/messages').then(response => {
-                this.messages = response.data;
+        momoPay(payload) {
+            axios.post('/api/pay-with-momo', payload).then(response => {
+                this.$loading(false);
+                this.apiresponse = response.data;
+                this.$bvModal.show('iFrame');
+            },error=>{
+                this.$loading(false);
+                console.log(error);
+                this.apierrors.push(error);
             });
-        },
-
-        addMessage(message) {
-            this.messages.push(message);
-
-            axios.post('/messages', message).then(response => {
-            //   console.log(response.data);
-            });
+        
         }
     }
 });

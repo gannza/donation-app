@@ -524,7 +524,7 @@ h5 {
 }
 @media (min-width: 744px){
 .africaxyz-new-week-card {
-    padding-left: 10px !important;
+    /* padding-left: 10px !important; */
     width: 100% !important;
 }
 }
@@ -537,11 +537,11 @@ h5 {
     -ms-flex: 1 0 calc(100% - 84px) !important;
     flex: 1 0 -webkit-calc(100% - 84px) !important;
     flex: 1 0 -moz-calc(100% - 84px) !important;
-    flex: 1 0 calc(100% - 84px) !important;
+    flex: 1 0 calc(100% - 0) !important;
     scroll-snap-align: start !important;
     scroll-snap-stop: always !important;
     margin-left: 0px !important;
-    padding-left: 20px !important;
+    /* padding-left: 20px !important; */
 }
 .africaxyz-new-week-card-a {
     cursor: pointer !important;
@@ -559,8 +559,8 @@ h5 {
     outline: none !important;
     padding-top: 14px !important;
     padding-bottom: 14px !important;
-    padding-left: 24px !important;
-    padding-right: 24px !important;
+    /* padding-left: 24px !important;
+    padding-right: 24px !important; */
     -webkit-transition: box-shadow 0.2s ease, -webkit-transform 0.1s ease, transform 0.1s ease !important;
     -moz-transition: box-shadow 0.2s ease, transform 0.1s ease !important;
     transition: box-shadow 0.2s ease, -ms-transform 0.1s ease, -webkit-transform 0.1s ease, transform 0.1s ease !important;
@@ -784,3 +784,393 @@ a, a:hover, a:focus {
 }
 
 
+.africaxyz-online-experience {
+    -webkit-box-align: end !important;
+    -ms-flex-align: end !important;
+    display: -webkit-box !important;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+    -webkit-align-items: flex-end !important;
+    align-items: flex-end !important;
+}
+.africaxyz-online-experience-1 {
+    -webkit-box-flex: 1 !important;
+    -ms-flex-positive: 1 !important;
+    -webkit-flex-grow: 1 !important;
+    flex-grow: 1 !important;
+}
+.africaxyz-online-experience-1-a {
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-style: inherit !important;
+    font-variant: inherit !important;
+    line-height: inherit !important;
+    color: #222222 !important;
+    text-decoration: underline !important;
+    border-radius: 4px !important;
+    font-weight: 600 !important;
+    outline: none !important;
+}
+
+.africaxyz-online-experience-1-a-span {
+    font-size: 14px !important;
+    line-height: 18px !important;
+    color: #222222 !important;
+    font-weight: 400 !important;
+}
+.africaxyz-online-experience-section {
+    position: relative !important;
+}
+.africaxyz-online-experience-section-1 {
+    font-size: 12px !important;
+    line-height: 16px !important;
+    display: -webkit-box !important;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+    font-weight: 800 !important;
+    margin-bottom: 8px !important;
+}
+.africaxyz-online-experience-section-svg {
+    margin-right: 4px !important;
+}
+
+@media (min-width: 744px)
+{
+    .africaxyz-online-experience-section-h1 {
+        margin-bottom: 4px !important;
+    }
+}
+
+.africaxyz-online-experience-section-h1 {
+    font-size: 26px !important;
+    line-height: 30px !important;
+    font-weight: 600 !important;
+}
+.africaxyz-online-experience-section-h1-h1 {
+    color: inherit !important;
+    font-size: 1em !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.africaxyz-online-experience-section-2 {
+    -webkit-box-align: end !important;
+    -ms-flex-align: end !important;
+    display: -webkit-box !important;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+    -webkit-align-items: flex-end !important;
+    align-items: flex-end !important;
+}
+.africaxyz-online-experience-section-2-1 {
+    -webkit-box-flex: 1 !important;
+    -ms-flex-positive: 1 !important;
+    -webkit-flex-grow: 1 !important;
+    flex-grow: 1 !important;
+}
+@media (min-width: 744px)
+{
+    .africaxyz-online-experience-section-2-1-1 {
+        margin-top: 8px !important;
+    }
+}
+.africaxyz-online-experience-section-2-1-1 {
+    -webkit-box-lines: multiple !important;
+    -webkit-box-align: baseline !important;
+    -ms-flex-align: baseline !important;
+    font-size: 14px !important;
+    line-height: 18px !important;
+    -webkit-align-items: baseline !important;
+    align-items: baseline !important;
+    display: -webkit-box !important;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+    -webkit-flex-wrap: wrap !important;
+    -ms-flex-wrap: wrap !important;
+    flex-wrap: wrap !important;
+    margin-top: 12px !important;
+}
+.africaxyz-online-experience-section-2-1-1-2 {
+    -webkit-box-lines: multiple !important;
+    -webkit-box-align: baseline !important;
+    -ms-flex-align: baseline !important;
+    font-size: 14px !important;
+    line-height: 18px !important;
+    -webkit-align-items: baseline !important;
+    align-items: baseline !important;
+    display: -webkit-box !important;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+    -webkit-flex-wrap: wrap !important;
+    -ms-flex-wrap: wrap !important;
+    flex-wrap: wrap !important;
+    margin-top: 12px !important;
+}
+.africaxyz-online-experience-section-2-1-1-2-btn {
+    cursor: pointer !important;
+    position: relative !important;
+    border-color: black !important;
+    -ms-touch-action: manipulation !important;
+    touch-action: manipulation !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+    font-weight: inherit !important;
+    border-radius: 0px !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    outline: none !important;
+    padding-top: 14px !important;
+    padding-bottom: 14px !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    -webkit-transition: box-shadow 0.2s ease, -webkit-transform 0.1s ease, transform 0.1s ease !important;
+    -moz-transition: box-shadow 0.2s ease, transform 0.1s ease !important;
+    transition: box-shadow 0.2s ease, -ms-transform 0.1s ease, -webkit-transform 0.1s ease, transform 0.1s ease !important;
+    background: transparent !important;
+    border: none !important;
+    color: inherit !important;
+    display: block !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    text-align: inherit !important;
+    text-decoration: none !important;
+    height: 100% !important;
+    width: 100% !important;
+}
+.africaxyz-online-experience-section-2-1-1-2-btn-svg {
+    cursor: pointer !important;
+    position: relative !important;
+    border-color: black !important;
+    -ms-touch-action: manipulation !important;
+    touch-action: manipulation !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+    font-weight: inherit !important;
+    border-radius: 0px !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    outline: none !important;
+    padding-top: 14px !important;
+    padding-bottom: 14px !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    -webkit-transition: box-shadow 0.2s ease, -webkit-transform 0.1s ease, transform 0.1s ease !important;
+    -moz-transition: box-shadow 0.2s ease, transform 0.1s ease !important;
+    transition: box-shadow 0.2s ease, -ms-transform 0.1s ease, -webkit-transform 0.1s ease, transform 0.1s ease !important;
+    background: transparent !important;
+    border: none !important;
+    color: inherit !important;
+    /* display: block !important; */
+    margin: 0px !important;
+    padding: 0px !important;
+    text-align: inherit !important;
+    text-decoration: none !important;
+    height: 100% !important;
+    width: 100% !important;
+}
+.africaxyz-online-experience-section-2-1-1-2-btn-svg-red {
+    font-size: 18px !important;
+    margin-right: 10px !important;
+    color:red !important;
+    /* display: -webkit-inline-box !important;
+    display: -moz-inline-box !important;
+    display: -ms-inline-flexbox !important;
+    display: -webkit-inline-flex !important; */
+    /* display: inline-flex !important; */
+}
+.africaxyz-online-experience-section-2-1-1-2-btn-rating {
+    color: var(--parsed-html-color, #222222) !important;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+    font-weight: 600 !important;
+    /* margin-bottom: 16px !important; */
+}
+.africaxyz-online-experience-section-2-1-1-2-btn-rating-dot {
+    margin: 0 8px !important;
+}
+.africaxyz-online-experience-section-2-1-1-2-btn-rating-country {
+    -webkit-box-align: baseline !important;
+    -ms-flex-align: baseline !important;
+    -webkit-align-items: baseline !important;
+    align-items: baseline !important;
+    display: -webkit-inline-box !important;
+    display: -moz-inline-box !important;
+    display: -ms-inline-flexbox !important;
+    display: -webkit-inline-flex !important;
+    display: inline-flex !important;
+    min-width: 0px !important;
+}
+
+.africaxyz-online-experience-section-2-1-1-2-btn-rating-country-a {
+    color: var(--parsed-html-color, #222222) !important;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+    font-weight: 600 !important;
+    text-decoration: underline !important;
+}
+.africaxyz-online-experience-section-2-1-1-2-btn-rating-country-dot {
+    -webkit-box-lines: multiple !important;
+    -webkit-box-align: baseline !important;
+    -ms-flex-align: baseline !important;
+    font-size: 14px !important;
+    line-height: 18px !important;
+    -webkit-align-items: baseline !important;
+    align-items: baseline !important;
+    display: -webkit-box !important;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+    -webkit-flex-wrap: wrap !important;
+    -ms-flex-wrap: wrap !important;
+    flex-wrap: wrap !important;
+    margin-top: 12px !important;
+}
+.africaxyz-online-experience-section-2-1-1-2-btn-rating-country-title {
+    -webkit-box-align: baseline !important;
+    -ms-flex-align: baseline !important;
+    -webkit-align-items: baseline !important;
+    align-items: baseline !important;
+    display: -webkit-inline-box !important;
+    display: -moz-inline-box !important;
+    display: -ms-inline-flexbox !important;
+    display: -webkit-inline-flex !important;
+    display: inline-flex !important;
+    min-width: 0px !important;
+}
+.africaxyz-online-experience-section-2-1-1-2-btn-rating-country--sub-title{
+    color: var(--parsed-html-color, #222222) !important;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+    font-weight: 600 !important;
+    text-decoration: underline !important
+}
+
+.africaxyz-online-experience-section-hoster::before {
+    display: -webkit-box !important;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+    content: '' !important;
+}
+.africaxyz-online-experience-section-hoster-details {
+    -webkit-box-pack: justify !important;
+    -ms-flex-pack: justify !important;
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    display: -webkit-box !important;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+    -webkit-align-items: center !important;
+    align-items: center !important;
+    -webkit-justify-content: space-between !important;
+    justify-content: space-between !important;
+}
+.africaxyz-online-experience-section-hoster-details-name {
+    color: #222222 !important;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 22px !important;
+    line-height: 26px !important;
+}
+.africaxyz-online-experience-section-hoster-details-name-h1 {
+    color: inherit !important;
+    font-size: 1em !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+.africaxyz-online-experience-section-hoster-details-min {
+    padding-top: 8px !important;
+}
+
+.africaxyz-online-experience-section-hoster-details-avatar {
+    margin-left: 16px !important;
+}
+
+.africaxyz-online-experience-section-hoster-details-avatar-1 {
+    font-size: 28px !important;
+}
+.africaxyz-online-experience-section-hoster-details-avatar-1-1 {
+    display: block !important;
+    position: relative !important;
+}
+.africaxyz-online-experience-section-hoster-details-avatar-1-1-btn {
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    font-style: inherit !important;
+    font-variant: inherit !important;
+    line-height: inherit !important;
+    color: inherit !important;
+    text-decoration: underline !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    background: transparent !important;
+    border: 0px !important;
+    cursor: pointer !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    -webkit-user-select: auto !important;
+    -moz-user-select: auto !important;
+    -ms-user-select: auto !important;
+    user-select: auto !important;
+    display: block !important;
+    height: 100% !important;
+    position: relative !important;
+    width: 100% !important;
+    -webkit-tap-highlight-color: transparent !important;
+    outline: none !important;
+    border-radius: 50% !important;
+}
+.africaxyz-online-experience-section-hoster-details-avatar-1-1-btn-x {
+    background: #DDDDDD !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    position: relative !important;
+}
+.africaxyz-online-experience-section-hoster-details-avatar-1-1-btn:after {
+    border: 0 solid #000000 !important;
+    content: "" !important;
+    display: block !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+    border-radius: 50% !important;
+}
+.africaxyz-online-experience-section-hoster-details-avatar-1-1-btn-x-img {
+    background-position: 50% 50% !important;
+    background-repeat: no-repeat !important;
+}
+.africaxyz-online-experience-section-hoster-details-avatar-1-1-btn-x-img-img {
+    height: 100% !important;
+    width: 100% !important;
+    position: static !important;
+}
+.africaxyz-online-experience-section-hoster-details-avatar-1-1-btn-x-img-img-bg {
+    display: inline-block !important;
+    vertical-align: bottom !important;
+    height: 100% !important;
+    width: 100% !important;
+    background-position: 50% 50% !important;
+    background-repeat: no-repeat !important;
+}

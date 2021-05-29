@@ -19,6 +19,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/page-2', function () {
+    return view('page-2');
+});
 Route::get('/pay-with-momo', function () {
     return view('momo');
 });
@@ -34,6 +37,6 @@ Route::get('/donation-failed/{id}', function ($id) {
 });
 
 //payments
-Route::post('payments', 'PaymentController@store');
-
+Route::post('api/pay-with-momo', 'PaymentController@store');
+Route::post('approvepayment', 'PaymentController@approveTransaction');
 Auth::routes();
